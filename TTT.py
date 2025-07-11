@@ -14,15 +14,22 @@ winC = False
 f = Figlet(font='slant')
 
 
+def clear():
+    if os.name == 'nt':
+        os.system("cls")
+    else:
+        os.system('clear')
+
+
 def start():
-    os.system("clear")
+    clear()
     print("Welcome to \n")
     print(f.renderText('Py-Tac-Toe!'))
     time.sleep(2)
 
 
 def title():
-    os.system("clear")
+    clear()
     print("PY-TAC-TOE")
     print("\n\n")
     print("Use WASD to select and space to confirm")
@@ -45,7 +52,7 @@ def title():
 
 
 def controls():
-    os.system("clear")
+    clear()
     print("Py-Tac-Toe\n\n")
     print("Use WASD to navigate the menus and game board")
     print("Press space to select or play")
@@ -72,7 +79,7 @@ def reset():
 
 
 def win():
-    os.system("clear")
+    clear()
     if p1 is False:
         player = "PLAYER 1"
     elif p1 is True:
@@ -85,7 +92,7 @@ def win():
 
 
 def vs():
-    os.system("clear")
+    clear()
     cursorarray = pointer(cursorpos)
 
     print(
@@ -189,7 +196,7 @@ while True:
                 state = "title"
                 cursorpos = 2
             elif cursorpos == 3:
-                os.system("clear")
+                clear()
                 break
     elif state == "controls":
         if keypress == " ":
