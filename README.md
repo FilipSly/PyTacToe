@@ -9,7 +9,7 @@
 >WASD to move and Space to confirm
 
 ## Installation/Usage
->Currently only written for MacOS and (Untested) Linux. Windows port coming soon
+>Currently only written for MacOS and Linux. Windows is highly experimental
 
 >Download and run the source code with python3 or an IDE
 

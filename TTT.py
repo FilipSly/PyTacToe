@@ -1,7 +1,10 @@
 import time
 import os
 from pyfiglet import Figlet
-import getch
+if os.name == 'nt':
+    import msvcrt as getch
+else:
+    import getch
 
 blank = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
