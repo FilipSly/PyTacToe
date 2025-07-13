@@ -2,9 +2,13 @@ import time
 import os
 from pyfiglet import Figlet
 if os.name == 'nt':
-    import msvcrt as getch
+    import msvcrt
+    def get_key():
+        return msvcrt.getch().decode('utf-8')
 else:
     import getch
+    def get_key():
+        return getch.getch()
 
 blank = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
@@ -177,7 +181,7 @@ start()
 
 while True:
     redraw(state)
-    keypress = getch.getch()
+    keypress = get_key()
     if state == "title":
         if keypress == 'w':
             if cursorpos - 1 < 0:

@@ -9,8 +9,9 @@
 >WASD to move and Space to confirm
 
 ## Installation/Usage
->Currently only written for MacOS and Linux. Windows is highly experimental
+>Works on macOS, Linux and now Windows as well!
 
->Download and run the source code with python3 or an IDE
+>Download and install the dependencies from the file, with pip, then run the source code with python3 or an IDE
+
 
 >Alternatively, download a release for your system (if there is one at the time) and run it.
